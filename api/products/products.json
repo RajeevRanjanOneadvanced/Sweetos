@@ -1,0 +1,35 @@
+[
+    {
+        "productId": 1,
+        "productName": "Green Donut",
+        "productCode": "SW-001",
+        "expiryDate": "March 19, 2016",
+        "description": "A donut with chocolate frosting and green sprinkles.",
+        "price": 4.95,
+        "starRating": 3.2,
+        "availableUnits": 4,
+        "imageUrl": "https://openclipart.org/download/248991/Green-Donut-2.svg"
+    },
+    {
+        "productId": 2,
+        "productName": "Pink Donut",
+        "productCode": "SW-002",
+        "expiryDate": "March 21, 2016",
+        "description": "A donut with chocolate frosting and pink/white sprinkles.",
+        "price": 4.10,
+        "starRating": 3.2,
+        "availableUnits": 2,
+        "imageUrl": "https://openclipart.org/download/248993/Pink-Donut-2.svg"
+    },
+    {
+        "productId": 3,
+        "productName": "Sprinky Donut",
+        "productCode": "SW-003",
+        "expiryDate": "August 22, 2016",
+        "description": "A donut with chocolate frosting and mixed sprinkles.",
+        "price": 4.50,
+        "starRating": 4.50,
+        "availableUnits": 10,
+        "imageUrl": "https://openclipart.org/download/248990/Christmas-Donut.svg"
+    }
+]

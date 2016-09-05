@@ -1,0 +1,56 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2">Filter by:</div>
+            <div class="col-md-4">
+                <input type="text" [(ngModel)]='listFilter'>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Filtered by: {{ listFilter }}</h3>
+            </div>
+        </div>
+        <div class="table-responsive" *ngIf='products.length'>
+            <table class="table table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Available Units</th>
+                        <th>Expires on</th>
+                        <th>Price</th>
+                        <th>5 Star Rating</th>
+                        <th>
+                            <button class="btn btn-primary" (click)='toggleImage()'>
+                               {{showImage ? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='#product of products | productFilter:listFilter '>
+                        <td>
+                            <a [routerLink]="['ProductDetail', { id: product.productId }]">
+                                {{ product.productName  }}
+                            </a>                      
+                        </td>
+                        <td>{{ product.availableUnits }} (set of 4)</td>
+                        <td>{{ product.expiryDate }}</td>
+                        <td>{{ product.price | currency:'USD':true:'1.2-2' }}</td>
+                        <td><star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></star></td>
+                        <td>
+                            <a [routerLink]="['ProductDetail', { id: product.productId }]">
+                                <img *ngIf='showImage' [src]='product.imageUrl' [alt]='product.productName' [title]='product.productName | uppercase'
+                                    [style.width.px]='imageWidth'
+                                    [style.margin.px]='imageMargin'>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
