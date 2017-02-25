@@ -1,6 +1,6 @@
 # Sweetos
 
-1) Open a command prompt in the project's root directory (APM - Start)
+1) Open a command prompt in the project's root directory
 
 2) Type: `npm install`
     This installs the dependencies as defined in the package.json file.
